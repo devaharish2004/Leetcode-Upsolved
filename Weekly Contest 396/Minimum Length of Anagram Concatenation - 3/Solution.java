@@ -23,6 +23,7 @@ class Solution {
     }
     public int minAnagramLength(String s) {
         int n = s.length();
+        //since exactly divisible values are only possible, we have to find the minimum possible answer from those values.
         for(int i = 1; i <= n; i++) {
             if(n%i == 0 && func(s,i,n) == true) {
                 return i;
